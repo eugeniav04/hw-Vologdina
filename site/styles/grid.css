@@ -1,0 +1,28 @@
+.one,.two {
+    background-color: rebeccapurple;
+    border-radius: 50%;
+}
+.zzz{
+    display: grid;
+    grid-template-areas:
+    "one one one one one one one one one one"
+    "two two two two two two two two two two";
+    text-align: center;
+    height: 120px;
+    gap: 10px;
+}
+@media screen and (max-width: 500px){
+    .one,.two {
+        background-color: red;
+        border-radius: 50%;
+    }
+    .zzz{
+        display: grid;
+        grid-template-areas:
+    "one one one one one one one one one one"
+    "two two two two two two two two two two";
+        text-align: center;
+        height: 120px;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: khaki;
+}
+header, main{
+    padding: 10px;
+    width: 100%;
+
+}
+header{
+    background: peru url("../Image/scorpio.png") no-repeat 2% 40%;
+    width: 100%;
+    height: 70px;
+}
+.cap{
+     height: 64px;
+     width: 64px;
+}
+.menu{
+     list-style: none;
+     position: absolute;
+     top: 10px;
+     right: 20px;
+ }
+main{
+    background: khaki;
+    display: grid;
+    height: 100%
+}
+.container{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+}
+.photo{
+    height: 50vmax;
+    width: 40vmax;
+    margin: 5px;
+}
+.pht{
+    object-fit: cover;
+    width: 100%;
+    height: 95%;
+}
+.bok{
+     height: auto;
+}
+.fio{
+    padding: 10px;
+    height: 50px;
+}
+.info{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    /*background-color: blue;*/
+    overflow: hidden;
+}
+.me,.opinion{
+    display: inline-block;
+    font-size: 2vw;
+    margin: 10px;
+}
+
+.tab_1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.one{
+    background-color: #EEE8AA;
+    justify-content: center;
+    padding: 10px;
+    margin: 5px;
+}
+.picture{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    width: 150px;
+}
+.grid{
+    background-color: khaki;
+    display: grid;
+    grid-template-columns:auto auto;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-around;
+    margin: 5px;
+    gap: 10px;
+}
+.two{
+    background-color: #EEE8AA;
+    display: inline-grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
+    padding: 5px;
+}
+.picture_one{
+    margin: 5px;
+    padding: 0px 0px 58% 0px;
+    overflow: hidden;
+    position: relative;
+}
+.picture_one img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@media screen and (min-width:577px) and (max-width:768px){
+    .container{
+        display: grid;
+        grid-template-areas:
+        "photo fio fio"
+        "photo me option"
+        "photo me option";
+    }
+    .tab_1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .one{
+        width: 48%;
+    }
+
+}
+@media screen and (max-width: 576px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .container{
+        display: inline-grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+    .photo{
+        height: auto;
+        max-width: 95vw;
+        width: 100vw;
+        margin: 5px;
+    }
+    .bok{
+        max-width: 95vw;
+        width: 98vw;
+    }
+    .fio{
+        display: flex;
+        justify-content:center;
+    }
+    .info{
+        grid-template-rows: 1fr;
+    }
+    .me,.opinion{
+        font-size: 3vw;
+    }
+    .tab_1{
+        justify-content: center;
+    }
+    .one{
+        width: 80%;
+        padding: 10px;
+        margin: 5px;
+    }
+    .grid{
+        grid-template-columns:auto;
+        grid-template-rows: repeat(4, 1fr);
+        justify-content: space-around;
+    }
+    .picture{
+        margin: 5px;
+        padding: 0px 0px 58% 0px;
+        overflow: hidden;
+        position: relative;
+    }
+    .picture img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
