@@ -59,3 +59,33 @@ for($i = 0;$s < 10;){
     $s += ($a / $b);
     ++$i;
 } echo  "Количество элементов = ". $i . "<br>";
+//8. Создать двумерный массив произвольной длины, содержащий строковые значения.
+//Необходимо вывести все элементы массива, начинающиеся на А.
+echo '<hr>';
+echo "Урок 5-6 Слайд 17" . '<br>';
+echo "Задача 8" . '<br>';
+$arr = [
+    'fruits' => ['apple', 'pineapple', 'banana'],
+    'vegetable' => ['tomato', 'avocado', 'cucumber'],
+    'drinks' => ['coffee', 'tea', 'ayran']
+];
+print_r($arr);
+echo '<br>';
+foreach ($arr as $submassiv){
+    foreach ($submassiv as $elements){
+        if (mb_substr($elements,0,1) == 'a'){
+            echo 'С буквы a начинается - ' . $elements . '<br>';
+        }
+    }
+}
+echo '<hr>';
+echo "Задача 9" . '<br>';
+//Создать двумерный массив, состоящий из чисел.
+//Необходимо вывести общее количество элементов массива и количество элементов массива для каждого измерения.
+$arr = [[1,2,3], [4,5,6,7], [8,9]];
+$op = count($arr, COUNT_RECURSIVE);
+echo 'Общее количество элементов: ' . $op - 3;
+echo '<br>';
+foreach ($arr as $item){
+    echo ' ' . count($item) . ' ';
+}
